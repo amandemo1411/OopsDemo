@@ -6,7 +6,10 @@ namespace OopsDemo.Constructors
 {
     public class ConstructorExample
     {
-         int a;
+        //public const string printBefore = "STARTS WITH "; --Value cannot get changed at run time or compile time
+        //public readonly string changeValue = "Test1"; -- Value can be changed only in non-static contructor
+        //public static readonly string changeValue = "Test1"; -- Value can only be changed in static constructor
+        int a = 0;
          int b;
         int copya1;
         int copyb1;
@@ -24,6 +27,7 @@ namespace OopsDemo.Constructors
 
         public ConstructorExample(int x, int y) // parameterized constructor
         {
+            //changeValue = "Test2";
             this.a = x;
             this.b = y;
         }
@@ -35,7 +39,7 @@ namespace OopsDemo.Constructors
         }
 
         public void PrintConstructorExample()
-        {
+        {            
             Console.WriteLine("Value of a: " + copya1);
             Console.WriteLine("Value of b: " + copyb1);
         }
